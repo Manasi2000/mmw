@@ -218,7 +218,7 @@ ul{
   text-align: center;
   justify-content: center;
   justify-items: center;
-  transition: transform 0.8s;
+  transition: transform 0.8s ease;
   transform-style: preserve-3d;
 }
 
@@ -226,12 +226,20 @@ ul{
   transform: rotateY(180deg);
 }
 
-.flip-box-front, .flip-box-back {
+.flip-box-front{
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.flip-box-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; 
+  transform: rotateY(180deg);
 }
 
 .flip-box-front {
@@ -247,13 +255,13 @@ ul{
   width: 100%;
   color:white;
 }
-.flip-box-back {
+/* .flip-box-back {
   justify-content: center;
   background-color: transparent;
   color: white;
   border:1px solid white;
   transform: rotateY(180deg);
-}
+} */
 .bg-black{
   background: black;
   color:white;
